@@ -51,6 +51,14 @@ h1 {
     filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
 }
 
+.home_page .icon_img{
+  animation: none;
+
+}
+.home_page h1{
+  animation: none;
+}
+
 /* --- Premium Magnetic Navigation --- */
 .main_nav {
     background: rgba(255, 255, 255, 0.7);
@@ -103,6 +111,10 @@ h1 {
 }
 
 .nav_link:hover::after {
+    width: 60%;
+}
+
+.nav_link.active::after {
     width: 60%;
 }
 
