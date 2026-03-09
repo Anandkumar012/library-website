@@ -1,0 +1,399 @@
+/* --- Google Fonts & External Libraries --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Poppins:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --primary: #1e3a8a;
+    --accent: #fbbf24;
+    --neon-glow: rgba(251, 191, 36, 0.6);
+    --white: #ffffff;
+    --bg-body: #f8fafc;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: #1e293b;
+    overflow-x: hidden;
+}
+
+/* --- Animated Dynamic Header --- */
+.main_header {
+    background: linear-gradient(-45deg, #1e3a8a, #2563eb, #0f172a, #1e40af);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite; /* Background dhire-dhire move hoga */
+    color: var(--white);
+    padding:20px 20px 80px 20px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif; /* Futuristic Font */
+    font-size: 5vw;
+    font-weight: 800;
+    letter-spacing: 4px;
+    animation: zoomIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+.icon_img {
+    width: 100px;
+    height: 100px;
+    animation: zoomIn 1.2s cubic-bezier(0.175,0.885 , 0.32 , 1.275);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.7));
+}
+
+.home_page .icon_img{
+  animation: none;
+
+}
+.home_page h1{
+  animation: none;
+}
+
+/* --- Premium Magnetic Navigation --- */
+.main_nav {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent);
+    padding: 10px 0;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    margin: 0 25px;
+    padding: 12px 25px;
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Nav Hover Effect: Box Shadow & Scale */
+.nav_link:hover {
+    background: var(--primary);
+    color: var(--accent);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(30, 58, 138, 0.3);
+}
+
+/* Active Line Animation */
+.nav_link::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--accent);
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav_link:hover::after {
+    width: 60%;
+}
+
+.nav_link.active::after {
+    width: 60%;
+}
+
+/* --- Modern Floating Cards --- */
+.main_card {
+    max-width: 1100px;
+    margin: 20px auto 60px auto;
+    padding: 20px;
+}
+
+.main_section {
+    background: var(--white);
+    padding:45px;
+    border-radius: 35px;
+    margin-bottom: 40px;
+    box-shadow: 20px 20px 60px #E0FFFF, -20px -20px 60px #00FFFF; /* Neumorphism Look */
+    animation: slideUp 1s ease-out;
+    transition: 0.4s;
+}
+
+.main_section:hover {
+    transform: perspective(1000px) rotateX(2deg) translateY(-10px);
+    box-shadow: 0 30px 50px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.library_intro{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+.library_intro--right{
+    flex-direction: row-reverse;
+}
+
+.gallery_section{
+    margin-top:40px;
+}
+.gallery_section h2{
+  text-align: center;
+}
+
+.gallery_grid{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+}
+
+/* Sirf gallery.html */
+.gallery_page .gallery_grid{
+    grid-template-columns: repeat(5,1fr);
+}
+
+.gallery_grid img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.view_all{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+    background:#f2f2f2;
+    border-radius:10px;
+    font-weight:600;
+}
+
+.view_all a{
+    text-decoration:none;
+    color:#333;
+    text-align:center;
+    width:100%;
+}
+
+
+/* --- About Page 3D Grid --- */
+.about_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.about_grid_list {
+    background: #f1f5f9;
+    padding: 25px;
+    border-radius: 20px;
+    border-bottom: 5px solid transparent;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.about_grid_list:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-15px) rotateZ(1deg);
+    border-bottom: 5px solid var(--accent);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.4);
+}
+
+h3 {
+    transition: 0.3s;
+}
+
+.about_grid_list:hover h3 {
+    color: var(--accent);
+}
+
+
+/* --- Ultra-Glow Button --- */
+a[href="https://docs.google.com/forms/d/e/1FAIpQLSf2CYbp6UCN3HZZQZBgRJLe7OfTXqX4nN_rKwlwOrmLwPAEdA/viewform"] {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--primary);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 45px; /* Spacing fix kiya timing se door karne ke liye */
+    box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3);
+    animation: glowEffect 2s infinite;
+    transition: 0.3s;
+}
+
+/* --- Footer (Heading & Icon Fix) --- */
+footer {
+    background: #0f172a;
+    color: var(--white);
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+/* Footer layout fix (Follow + Contact side by side) */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-top: auto;
+}
+
+footer .main_section{
+  background:#f1f5f9;
+  box-shadow: 15px 15px 40px #b3ad6b, -15px -15px 40px #f59e0b;
+}
+
+footer .footer-socials,
+footer #contact {
+    flex: 1 1 450px;
+    max-width: 440px;
+}
+/* Footer Headings ab dikhengi */
+footer h3 {
+    color: #1e3a8a!important;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: fantasy;
+}
+
+/* Icons 10px bade kiye (60px se 70px) */
+.footer-socials a img {
+    width: 90px; 
+    height: 90px;
+    margin: 10px 15px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-socials a img:hover {
+    transform: rotate(360deg) scale(1.4);
+    filter: drop-shadow(0 0 15px var(--accent));
+}
+
+#contact ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+#contact ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#contact ul li a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+#contact img {
+    width: 45px;
+}
+
+/* Copyright text */
+.copyright{
+    background: #f1f5f9;
+    color: #1e293b;
+    padding: 18px;
+    margin-top: 25px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: 600;
+    width: 50%;
+    margin: auto;
+    font-family: fantasy;
+}
+
+.creator{
+    font-family: cursive;
+    font-weight: bold;
+}
+
+/* --- Image clise button --- */
+.lb-close {
+    width: 60px !important;
+    height: 60px !important;
+    background-size: 30px 30px !important;
+    top: 15px !important;
+    right: 20px !important;
+    opacity: 1 !important;
+}
+
+/* --- Advanced Keyframes --- */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowEffect {
+    0%, 100% { box-shadow: 0 0 15px var(--neon-glow); }
+    50% { box-shadow: 0 0 35px var(--accent); }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.2rem; }
+    nav ul { flex-direction: column; }
+    nav ul li { margin: 10px 0; }
+    main { margin-top: 20px; }
+    .copyright{
+      width: 100%;
+    }
+    .library_intro{
+        flex-direction:column;
+        text-align:center;
+    }
+    .gallery_grid{
+      grid-template-columns: repeat(2,1fr);
+      }/* mobile me 2 images */
+    .gallery_page .gallery_grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
