@@ -344,6 +344,16 @@ footer h3 {
     font-weight: bold;
 }
 
+/* --- Image clise button --- */
+.lb-close {
+    width: 60px !important;
+    height: 60px !important;
+    background-size: 30px 30px !important;
+    top: 15px !important;
+    right: 20px !important;
+    opacity: 1 !important;
+}
+
 /* --- Advanced Keyframes --- */
 @keyframes gradientMove {
     0% { background-position: 0% 50%; }
