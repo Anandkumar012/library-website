@@ -293,7 +293,6 @@ footer{
 footer .main_section{
     background:#f1f5f9;
     box-shadow:15px 15px 40px #b3ad6b,-15px -15px 40px #f59e0b;
-    animation:slideUp 1s ease-out;
 }
 
 footer .footer-socials,
