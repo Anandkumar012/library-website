@@ -161,11 +161,12 @@ h2{
 .gallery_grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:10px;
 }
 
 .gallery_page .gallery_grid{
-    grid-template-columns:repeat(6,1fr);
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
 }
 
 .gallery_grid img,
@@ -296,7 +297,7 @@ footer .main_section{
 }
 
 footer .footer-socials,
-.footer #contact{
+footer #contact{
     flex:1 1 450px;
     max-width:440px;
 }
@@ -310,8 +311,8 @@ footer h3{
 }
 
 .footer-socials a img{
-    width:90px;
-    height:90px;
+    width:85px;
+    height:85px;
     margin:10px 15px;
     transition:transform 0.6s cubic-bezier(0.175,0.885,0.32,1.275);
 }
@@ -433,6 +434,7 @@ footer h3{
 
     .gallery_grid img{
         height:120px;
+        
     }
 
     .gallery_page .gallery_grid{
